@@ -62,8 +62,11 @@ const GiftPage: React.FC = () => {
   };
 
   const handleOpenPDF = () => {
-    // В реальном проекте тут будет ссылка на PDF документ
-    alert("Здесь откроется PDF с подарком!");
+    // Перенаправление на указанную ссылку
+    window.open(
+      "https://www.wildberries.ru/63fc47b0-10fc-4169-ab10-36e479a9c208",
+      "_blank",
+    );
     setIsDialogOpen(false);
   };
 
@@ -96,7 +99,7 @@ const GiftPage: React.FC = () => {
 
       <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center font-[cursive]">
-          Твой подарок ждёт!
+          Подарок ждет тебя!
         </h1>
 
         <div className="text-xl text-white text-center mb-12 bg-green-800/50 max-w-2xl mx-auto p-6 rounded-xl backdrop-blur-sm">
@@ -155,15 +158,15 @@ const GiftPage: React.FC = () => {
               Шрек и его друзья приготовили для тебя особенный сюрприз!
             </DialogDescription>
           </DialogHeader>
-          <DialogFooter className="flex justify-center pt-6">
+          <div className="flex justify-center py-4">
             <Button
               onClick={handleOpenPDF}
-              className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold"
+              className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold w-full max-w-xs"
             >
               <Icon name="Gift" className="mr-2 h-5 w-5" />
               Открыть подарок
             </Button>
-          </DialogFooter>
+          </div>
         </DialogContent>
       </Dialog>
 
