@@ -155,14 +155,7 @@ const GiftPage: React.FC = () => {
               Шрек и его друзья приготовили для тебя особенный сюрприз!
             </DialogDescription>
           </DialogHeader>
-          <div className="flex justify-center my-6">
-            <img
-              src="https://i.imgur.com/3RVBcQH.png"
-              alt="Шрек"
-              className="h-32 object-contain"
-            />
-          </div>
-          <DialogFooter className="flex justify-center">
+          <DialogFooter className="flex justify-center pt-6">
             <Button
               onClick={handleOpenPDF}
               className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold"
